@@ -6,24 +6,48 @@
 body {
   font-family: 'Times New Roman', Times, serif;
   height: 100vh;
+  background-color: beige;
 }
 
 #navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   height: 65px;
   min-width: 100%;
-  background-color: aqua;
+  background-color: rgb(243, 225, 187);
+}
+
+#logo {
+  font-size: 2em;
+  font-weight: 800;
+  margin-left: 80px;
+}
+
+#user {
+  color: rgb(56, 56, 59);
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  margin-left: 250px;
+  padding: 0 10px;
+  font-weight: 400;
+  border: 1px solid blue;
+  background-color: rgb(238, 235, 233);
+  border-radius: 5px;
 }
 
 #nav ul {
   display: flex;
   justify-content: space-between;
+  margin-left: 400px;
+  font-size: 1.2em;
 }
 
 #nav ul li {
-  margin-right: 50px;
+  margin-right: 80px;
   list-style: none;
 }
 
@@ -41,7 +65,6 @@ body {
 #right {
   height: 500px;
   width: 500px;
-  border: 2px solid black;
 }
 
 #right img {
@@ -53,8 +76,41 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
-  width: 700px;
-  border: 2px solid black;
+  height: 500px;
+  width: 650px;
   text-align: center;
+  padding: 20px;
+
+}
+
+#left h1 {
+  margin: 20px 0px;
+  font-size: 2.5em;
+  color: rgb(45, 44, 44);
+  line-height: 1.1em;
+}
+
+#left h1 span {
+  color: blueviolet;
+  font-size: 1.1em;
+}
+
+#sp {
+  color: rgb(39, 39, 249);
+}
+
+#left p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+button {
+  margin: 20px;
+  height: 50px;
+  width: 180px;
+  background-color: rgb(0, 162, 237);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05em;
 }
