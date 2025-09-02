@@ -9,8 +9,6 @@ body {
   line-height: 1.4;
   font-size: 1rem;
   background-color: beige;
-  min-height: 100vh;
-  min-width: 100vw;
 }
 
 #logo {
@@ -131,16 +129,23 @@ body {
 
 #right-container {
   height: 500px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #right-container img {
   height: 500px;
 }
 
+#home-footer {
+  margin-top: 40px;
+  height: 120px;
+  width: 100%;
+  background-color: rgb(245, 215, 171);
+}
 
 
-@media (min-width: 767px) and (max-width: 1025px) {
+
+/* @media (min-width: 767px) and (max-width: 1025px) {
   #user {
     margin-right: 40px;
   }
@@ -207,3 +212,4 @@ body {
     height: 400px;
   }
 }
+ */
