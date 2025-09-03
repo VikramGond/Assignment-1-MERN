@@ -11,6 +11,7 @@ body {
   background-color: beige;
 }
 
+
 #logo {
   font-size: 2rem;
   font-weight: 800;
@@ -31,6 +32,9 @@ body {
   height: 65px;
   width: 100%;
   background-color: rgb(242, 190, 153);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #nav-links ul {
@@ -87,6 +91,7 @@ body {
 #left-container {
   text-align: center;
   max-width: 600px;
+  margin-top: 100px;
 }
 
 #left-container h1 {
@@ -129,11 +134,15 @@ body {
 
 #right-container {
   height: 500px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 #right-container img {
-  height: 500px;
+  height: 450px;
+}
+
+#home {
+  min-height: 100vh;
 }
 
 #home-footer {
@@ -142,9 +151,14 @@ body {
   justify-content: center;
   gap: 500px;
   margin-top: 40px;
-  height: 120px;
+  height: 100px;
   width: 100%;
   background-color: rgb(245, 215, 171);
+}
+
+#home-footer h1 {
+  font-size: 3rem;
+  color: #333;
 }
 
 #rht  {
