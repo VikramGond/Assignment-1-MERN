@@ -224,7 +224,7 @@ hr {
 }
 
 .service-item button:hover {
-  transform: scale(0.95);
+  transform: scale(0.98);
   background-color: rgb(161, 161, 224);
 }
 
@@ -245,13 +245,13 @@ hr {
   background-color: #e6e8f0;
 }
 
-#added-items {
+/* #added-items {
 
 }
 
 #contact-section {
   
-}
+} */
 
 
 
