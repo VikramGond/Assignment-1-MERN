@@ -217,9 +217,15 @@ hr {
   height: 30px;
   width: 80px;
   border: none;
-  background-color: rgb(174, 174, 219);
+  background-color: rgb(179, 179, 243);
   border-radius: 5px;
   color: rgb(29, 15, 15);
+  transition: transform 0.1s ease-in-out;
+}
+
+.service-item button:hover {
+  transform: scale(0.95);
+  background-color: rgb(161, 161, 224);
 }
 
 .service-item span {
@@ -247,7 +253,10 @@ hr {
   
 }
 
-/* @media (min-width: 767px) and (max-width: 1025px) {
+
+
+
+@media (min-width: 767px) and (max-width: 1025px) {
   #user {
     margin-right: 40px;
   }
@@ -267,6 +276,8 @@ hr {
   }
 
 }
+
+
 
 @media (min-width: 1026px) and (max-width:1380px) {
   #logo {
@@ -314,4 +325,4 @@ hr {
     height: 400px;
   }
 }
- */
+
