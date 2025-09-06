@@ -151,7 +151,7 @@ body {
   justify-content: center;
   gap: 500px;
   margin-top: 40px;
-  height: 100px;
+  height: 130px;
   width: 100%;
   background-color: rgb(245, 215, 171);
 }
@@ -168,7 +168,84 @@ body {
   gap: 40px;
 }
 
+#services {
+  min-height: 110vh;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
 
+#service-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 530px;
+  width: 550px;
+  background-color: #e6e8f0;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+#service-section h1 {
+  font-size: 46px;
+}
+
+hr {
+  background-color: black;
+  height: 2px;
+  margin: 0 20px;
+}
+
+#para {
+  font-size: 18px;
+  color: rgb(50, 50, 162);
+  word-spacing: 3px;
+  font-weight: bold;
+}
+
+.service-item {
+  display: flex;
+  text-align: left;
+  gap: 20px;
+  position: relative;
+}
+
+.service-item button {
+  position: absolute ;
+  right: 20px;
+  height: 30px;
+  width: 80px;
+  border: none;
+  background-color: rgb(174, 174, 219);
+  border-radius: 5px;
+  color: rgb(29, 15, 15);
+}
+
+.service-item span {
+  font-size: 18px;
+}
+
+.price {
+  color: rgb(97, 97, 248);
+  font-weight: bold;
+}
+
+
+
+#right-section {
+  height: 600px;
+  width: 350px;
+  background-color: #e6e8f0;
+}
+
+#added-items {
+
+}
+
+#contact-section {
+  
+}
 
 /* @media (min-width: 767px) and (max-width: 1025px) {
   #user {
