@@ -1,6 +1,7 @@
 const addButtons = document.querySelectorAll('.add-btn');
 const cartTableBody = document.querySelector('#cart-items tbody');
 const totalAmount = document.getElementById('total-amount');
+const paraTag = document.getElementById('para2');
 
 let cart = [];
 
@@ -41,3 +42,21 @@ function removeItem(name) {
   cart = cart.filter(item => item.name !== name);
   renderCart();
 }
+
+const bookingForm = document.getElementById('booking-form');
+bookingForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (cart.length === 0) {
+    paraTag.innerHTML = 'Please Add some Product.';
+    paraTag.style.color = 'red';
+    return;
+  }
+  paraTag.innerHTML = "Booking Successful!";
+  paraTag.style.color = 'green';
+  bookingForm.reset();
+  cart = [];
+  renderCart();
+  setTimeout(() => {
+    paraTag.innerHTML = '';
+  }, 3000);
+});
