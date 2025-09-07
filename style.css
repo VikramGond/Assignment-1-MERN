@@ -270,20 +270,20 @@ hr {
 
 table {
     width: 100%;
-    border-collapse: collapse;
     height: 180px;
+    border-collapse: collapse;
 }
 
 table th, table td {
-    padding: 4px;
+    padding: 2px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
+
 table th {
     background-color: #dfdcdc;
 }
-
 
 
 @media (min-width: 767px) and (max-width: 1025px) {
