@@ -5,6 +5,9 @@ const paraTag = document.getElementById('para2');
 
 let cart = [];
 
+// Load saved data on page load
+showData();
+
 addButtons.forEach(button => {
   button.addEventListener('click', () => {
     const item = button.closest('.service-item');
@@ -36,6 +39,7 @@ function renderCart() {
   });
 
   totalAmount.textContent = total.toFixed(2);
+  saveData();
 }
 
 function removeItem(name) {
@@ -44,7 +48,7 @@ function removeItem(name) {
 }
 
 const bookingForm = document.getElementById('booking-form');
-bookingForm.addEventListener('submit', function(e) {
+bookingForm.addEventListener('submit', function (e) {
   e.preventDefault();
   if (cart.length === 0) {
     paraTag.innerHTML = 'Please Add some Product.';
@@ -60,3 +64,30 @@ bookingForm.addEventListener('submit', function(e) {
     paraTag.innerHTML = '';
   }, 3000);
 });
+
+function saveData() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function showData() {
+  const savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+    renderCart();
+  }
+}
+
+
+function saveData() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function showData() {
+  const savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+    renderCart();
+  }
+}
+
+showData()
