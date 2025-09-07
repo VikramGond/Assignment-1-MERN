@@ -41,7 +41,7 @@
                 <p id="para">Skip the hassle of laundry day! With our doorstep pickup and delivery, professional
                     cleaning, and on-time service, you'll never have to worry about piles of clothes again.</p>
 
-                <button id="book">Book Now</button>
+                <button id="book"><a href="#services">Book Now</a></button>
 
             </div>
 
@@ -131,13 +131,39 @@
                 <span class="price">₹2500</span>
                 <button class="add-btn">Add Item</button>
             </div>
+
             <hr>
+
             <p id="para">! Add the items to the Cart and Book Now</p>
         </div>
 
         <div id="right-section">
 
-            <div id="added-items"></div>
+            <div id="cart">
+                <h1>Added Items</h1>
+
+                <hr>
+
+                  <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be added here -->
+                </tbody>
+            </table>
+
+            
+            <h3>Total Amount: ₹<span id="total-amount">0</span></h3>
+
+        </div>
+
+            
             <div id="contact-section"></div>
 
         </div>

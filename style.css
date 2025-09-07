@@ -116,20 +116,20 @@ body {
   margin: 20px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(152, 138, 132);
+  background-color: rgb(153, 112, 94);
   font-weight: 600;
-  color: rgb(234, 221, 221);
   font-size: 1.2em;
   transition: transform 0.2s ease-in;
 }
 
+#left-container button a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
 #left-container button:hover {
   transform: scale(1.01);
-  background-color: rgb(139, 122, 122);
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: rgb(223, 208, 208);
-  text-decoration-thickness: 2px;
+  background-color: rgb(143, 103, 103);
 }
 
 #right-container {
@@ -196,7 +196,8 @@ body {
 hr {
   background-color: black;
   height: 2px;
-  margin: 0 20px;
+  margin: 3px 20px;
+  border: none;
 }
 
 #para {
@@ -248,12 +249,15 @@ hr {
   gap: 20px;
 }
 
-#added-items {
+#cart {
   height: 270px;
   width: 350px;
   border-radius: 10px;
   background-color: #e6e8f0;
   box-shadow: 0 4px 5px rgba(1, 1, 1, 0.3);
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
 }
 
 #contact-section {
@@ -264,6 +268,21 @@ hr {
   box-shadow: 0 4px 5px rgba(1, 1, 1, 0.3);
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    height: 180px;
+}
+
+table th, table td {
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #dfdcdc;
+}
 
 
 
