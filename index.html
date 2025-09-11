@@ -144,42 +144,53 @@
 
                 <hr>
 
-                  <table id="cart-items">
-                <thead>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Service Name</th>
-                        <th>Price</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Cart items will be added here -->
-                </tbody>
-            </table>
+                <table id="cart-items">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cart items will be added here -->
+                    </tbody>
+                </table>
 
-            
-            <h3>Total Amount: ₹<span id="total-amount">0</span></h3>
 
-        </div>
+                <h3>Total Amount: ₹<span id="total-amount">0</span></h3>
 
-            
+            </div>
+
+
             <div id="contact-section">
 
-                 <h2>Book Now</h2>
-            <form id="booking-form">
+                <h2>Book Now</h2>
+                <form id="booking-form">
 
-                <input type="text" placeholder="Full Name" required />
-                <input type="email" placeholder="Email ID" required />
-                <input type="tel" placeholder="Phone Number" required />
-                <button type="submit">Book now</button>
-            </form>
-            <p id="para2"></p>
+                    <input type="text" id="full-name" placeholder="Full Name" required />
+                    <input type="email" id="email" placeholder="Email ID" required />
+                    <input type="tel" id="phone" placeholder="Phone Number" required />
+                    <input type="text" id="address" placeholder="Address" required />
+
+                    <button type="submit">Book now</button>
+                </form>
+                <p id="para2"></p>
             </div>
 
         </div>
     </section>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "R5yINrHu_03C7QyJL",
+        });
+    })();
+</script>
     <script src="script.js"></script>
 
 </body>
