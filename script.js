@@ -108,10 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.textContent = "Sending...";
 
     var templateParams = {
-      to_name: "WC Laundry", // Your business name
-      to_email: "vikramgond22052@gmail.com", // Replace with YOUR actual email
-      from_name: name,
-      from_email: email,
       user_name: name,
       user_email: email,
       user_phone: phone,
