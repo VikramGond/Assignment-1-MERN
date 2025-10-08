@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // EmailJS is already initialized in HTML, so no need to initialize here
+  
 
   // Select elements
   const addButtons = document.querySelectorAll('.add-btn');
@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.textContent = "Sending...";
 
     var templateParams = {
+      order_id: 121,
       user_name: name,
       user_email: email,
       user_phone: phone,
