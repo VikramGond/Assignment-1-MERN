@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  
+
 
   // Select elements
   const addButtons = document.querySelectorAll('.add-btn');
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.getElementById('booking-form');
   const submitButton = bookingForm.querySelector('button[type="submit"]');
   const addressInput = document.querySelector('#address');
+ 
 
   let cart = [];
 
@@ -18,18 +19,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add items to cart
   addButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const item = button.closest('.service-item');
-      const name = item.dataset.name;
-      const price = parseFloat(item.dataset.price);
+  button.addEventListener('click', () => {
+    const item = button.closest('.service-item');
+    const name = item.dataset.name;
+    const price = parseFloat(item.dataset.price);
+    const rBtn = item.querySelector('.r-btn'); // ✅ find the correct remove button for this item
 
-      const existingItem = cart.find(i => i.name === name);
-      if (!existingItem) {
-        cart.push({ name, price });
-        renderCart();
-      }
-    });
+    const existingItem = cart.find(i => i.name === name);
+
+    if (!existingItem) {
+      cart.push({ name, price });
+
+      // Toggle buttons
+      button.style.display = 'none';
+      rBtn.style.display = 'inline-block'; // show the remove button
+
+      paraTag.innerHTML = '✅ Item added to cart.';
+      paraTag.style.color = 'green';
+      setTimeout(() => paraTag.innerHTML = '', 1500);
+
+      renderCart();
+    }
   });
+
+  // Handle remove button click too
+  const item = button.closest('.service-item');
+  const rBtn = item.querySelector('.r-btn');
+  rBtn.addEventListener('click', () => {
+    const name = item.dataset.name;
+
+    // Remove from cart
+    cart = cart.filter(i => i.name !== name);
+
+    // Toggle back buttons
+    rBtn.style.display = 'none';
+    button.style.display = 'inline-block';
+
+    paraTag.innerHTML = '🗑️ Item removed from cart.';
+    paraTag.style.color = 'red';
+    setTimeout(() => paraTag.innerHTML = '', 1500);
+
+    renderCart();
+    saveData();
+  });
+});
+
 
   // Render the cart
   function renderCart() {
@@ -43,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${index + 1}</td>
         <td>${item.name}</td>
         <td>₹${item.price.toFixed(2)}</td>
-        <td><button onclick="removeItem('${item.name}')">Remove ❌</button></td>
       `;
       cartTableBody.appendChild(row);
     });
@@ -153,3 +186,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// localStorage.clear()
